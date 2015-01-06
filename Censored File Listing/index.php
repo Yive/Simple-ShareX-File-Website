@@ -24,7 +24,7 @@
                <center><?php echo $owner;?>'s File Dump</center>
             </h1>
             <h4>
-               <center><?php echo $png->count();?> Images &amp; <?php echo $txt->count();?> Documents</center>
+               <center><?php if(!$png->count()){echo '0';}else{echo $png->count();}?> Images &amp; <?php if(!$txt->count()){echo '0';}else{echo $txt->count();}?> Documents</center>
             </h4>
             <table class="table table-hover">
                <thead>
