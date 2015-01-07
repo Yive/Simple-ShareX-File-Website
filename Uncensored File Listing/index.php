@@ -6,9 +6,6 @@
 //                       |___/ 
    $owner = 'Yive';
 // config end (no clue why I added this xD) //
-
-   $png = new GlobIterator('*.png');
-   $txt = new GlobIterator('*.txt');
 ?>
 <head>
    <title><?php echo $owner;?>'s File Dump</title>
