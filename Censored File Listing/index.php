@@ -4,7 +4,7 @@
 //   | (__/ _ \ ' \|  _| / _` |
 //    \___\___/_||_|_| |_\__, |
 //                       |___/ 
-	$owner = 'Yive';
+   $owner = 'Yive';
 // config end (no clue why I added this xD) //
 
    $png = new GlobIterator('*.png');
@@ -23,9 +23,6 @@
             <h1>
                <center><?php echo $owner;?>'s File Dump</center>
             </h1>
-            <h4>
-               <center><?php if(!$png->count()){echo '0';}else{echo $png->count();}?> Images &amp; <?php if(!$txt->count()){echo '0';}else{echo $txt->count();}?> Documents</center>
-            </h4>
             <table class="table table-hover">
                <thead>
                   <tr>
@@ -51,9 +48,6 @@
                          return $file_1 < $file_2 ? 1 : -1;
                      });
                      foreach ($files as $key => $file) {
-                         if(in_array($file, $filenames)){
-                     
-                         } else {
                      if(strrpos($file, '.txt')) {
                          echo
                          '
@@ -65,7 +59,7 @@
                                <td>Private</td>
                              </tr>
                          ';
-                     } elseif(strrpos($file, '.png')) {
+                     } elseif(strrpos($file, '.png') || strrpos($file, '.jpg')) {
                          echo
                          '
                              <tr>
@@ -77,7 +71,6 @@
                              </tr>
                          ';
                        }
-                         }
                      }
                      ?>
                </tbody>
