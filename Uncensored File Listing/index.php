@@ -50,7 +50,7 @@
                          '
                              <tr>
                                <th><i class="fa fa-file fa-7"></i></th>
-                               <td><a href="'.$file.'.txt" target="_blank">'.$file.'</a></td>
+                               <td><a href="'.$file.'" target="_blank">'.$file.'</a></td>
                                <td>Text Document</td>
                                <td>'.date ("F j, Y, g:i a", filemtime($file))." ".date('T').'</td>
                                <td>Public</td>
@@ -61,7 +61,7 @@
                          '
                              <tr>
                                <th><i class="fa fa-file fa-7"></i></th>
-                               <td><a href="'.$file.'.png" target="_blank">'.$file.'</a></td>
+                               <td><a href="'.$file.'" target="_blank">'.$file.'</a></td>
                                <td>Image</td>
                                <td>'.date ("F j, Y, g:i a", filemtime($file))." ".date('T').'</td>
                                <td>Public</td>
