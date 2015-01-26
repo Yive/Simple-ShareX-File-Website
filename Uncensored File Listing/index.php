@@ -50,10 +50,10 @@
                          '
                              <tr>
                                <th><i class="fa fa-file fa-7"></i></th>
-                               <td>'.$file.'</td>
+                               <td><a href="'.$file.'.txt" target="_blank">'.$file.'</a></td>
                                <td>Text Document</td>
                                <td>'.date ("F j, Y, g:i a", filemtime($file))." ".date('T').'</td>
-                               <td>Private</td>
+                               <td>Public</td>
                              </tr>
                          ';
                      } elseif(strrpos($file, '.png') || strrpos($file, '.jpg')) {
@@ -61,10 +61,10 @@
                          '
                              <tr>
                                <th><i class="fa fa-file fa-7"></i></th>
-                               <td>'.$file.'</td>
+                               <td><a href="'.$file.'.png" target="_blank">'.$file.'</a></td>
                                <td>Image</td>
                                <td>'.date ("F j, Y, g:i a", filemtime($file))." ".date('T').'</td>
-                               <td>Private</td>
+                               <td>Public</td>
                              </tr>
                          ';
                        }
