@@ -2,6 +2,7 @@
 # fileTypes contains an array of file types, simply just put a // or # infront of each file type you don't want to display in that file.
    require 'includes/config.php';
    require 'includes/fileTypes.php';
+   $count = new FilesystemIterator(__DIR__, FilesystemIterator::SKIP_DOTS);
 ?>
 <body>
 <?php
@@ -26,7 +27,7 @@ include 'includes/navbar.php';
             </table>
          </div>
          <div class="footer">
-            <p><!-- Please don't remove my URL, it's the least you can do for me. -->Made By <a href="https://twitter.com/ItsYive" target="_blank">Yive</a></p>
+            <p><!-- Please don't remove my URL, it's the least you can do for me. -->Made By <a href="https://twitter.com/ItsYive" target="_blank">Yive</a><span class="pull-right">Displaying <?php echo $max_displayed.' of '.number_format(iterator_count($count)).' files.';?></p>
          </div>
       </div>
    </div>
