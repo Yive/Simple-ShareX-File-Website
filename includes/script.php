@@ -1,5 +1,5 @@
 <?php
-   $files = glob('*');
+   $files = glob('files/*');
    
    usort($files, function($file_1, $file_2)
    {
@@ -13,7 +13,8 @@
    });
    $i = 0;
    foreach ($files as $key => $file) {
-      $filename = '<a href="'.$file.'" target="_blank">'.$file.'</a>';
+      $file_display_name = str_replace('files/', '', $file);
+      $filename = '<a href="'.$file.'" target="_blank">'.$file_display_name.'</a>';
       $publicity = 'Public';
     if($public == 'false') {
       $filename = '*****************';

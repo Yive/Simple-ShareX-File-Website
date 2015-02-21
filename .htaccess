@@ -1,0 +1,8 @@
+# Enables the rewrite module in apache.
+RewriteEngine On
+
+# Disables directory listings.
+Options -Indexes
+
+# Removes the file extension from the URL for cleaner looking links.
+RewriteCond %{REQUEST_FILENAME} !-f
