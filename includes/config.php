@@ -18,5 +18,6 @@
    $image_url = 'https://twitter.com/ItsYive';
 
 # Location of your files. Leave blank if they're in the main directory where index.php is located. If you do decide to put the files in a seperate folder, add a trailing slash on the end like so "files/"
+# Warning: If you set this as blank, your file count may be a few digits off of the real total.
    $files_location = '';
 ?>
