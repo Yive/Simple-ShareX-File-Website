@@ -7,12 +7,9 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#"><?php echo $owner; ?>'s File Dump</a>
+         <a class="navbar-brand" href=<?php if($image == 'false'){ echo '"#"'; } else { echo '"'.$image_url.'"'; } ?>><?php if($image == 'false'){ echo $owner."'s File Dump"; } else { echo '<img src="'.$image_location.'">'; } ?></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-         </ul>
          <ul class="nav navbar-nav navbar-right">
             <li><a href="https://twitter.com/ItsYive" target="_blank">Twitter</a></li>
          </ul>

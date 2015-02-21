@@ -1,5 +1,5 @@
 <?php
-   $files = glob('files/*');
+   $files = glob($files_location.'*');
    
    usort($files, function($file_1, $file_2)
    {
@@ -13,7 +13,7 @@
    });
    $i = 0;
    foreach ($files as $key => $file) {
-      $file_display_name = str_replace('files/', '', $file);
+      $file_display_name = str_replace($files_location.'', '', $file);
       $filename = '<a href="'.$file.'" target="_blank">'.$file_display_name.'</a>';
       $publicity = 'Public';
     if($public == 'false') {
@@ -31,8 +31,8 @@
              <td>'.$publicity.'</td>
            </tr>
        ';
-    }
     $i++;
+    }
     if($i==$max_displayed) break;
    }
 ?>
